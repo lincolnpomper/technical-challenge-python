@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CrossKnowledge - Code challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <style>
+    
+    .body {
+      font-family: Roboto;
+      font-size: 1em
+    }
+
+    .header {
+      display: flex;
+    }
+
+    .article {
+      width: 324px;
+      margin: 0 auto;
+      border: 1px solid #E7E7E7;
+    } 
+
+    .header-left-component {
+      width: 82%;
+    }
+  
+    .score-right {
+      position: relative;
+      right: 0px;
+      width: auto;
+      margin-top: 9px;
+    }
+
+    .image-tomatoes {
+      width: 20px;
+      height: auto;
+      vertical-align: bottom;
+    }
+
+    .container {
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%)
+    }
+
+    .image-main {
+      width: 100%;
+      position: relative;
+      z-index: -1;
+    }
+
+    .duration-text {
+      margin-top: 8px;
+      font-weight: lighter;
+    }
+    
+    .button-center-transparent {
+      position: absolute;
+      display: flex;
+      margin-top: -73px;
+      border-radius: 22px;
+      padding-left: 54px;
+      padding-right: 54px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border: 2px solid rgba(224, 224, 224, 0.59);
+      background-color: rgba(186, 186, 186, 0.75);
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.75);
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .footer {
+      font-weight: lighter;
+    }
+
+    .gray-panel {
+      background-color: #F7F7F7;
+      padding: 10px;
+    }
+    </style>
+</head>
+
+<body class="body">
+  <article class="article">
+    <header class="header gray-panel">
+      <div class="header-left-component">
+        <div>
+          Avengers: Infinity War
+        </div>
+        <div class="duration-text">
+          156 minutes
+        </div>
+      </div>
+      <div class="score-right">
+        85% <img class="image-tomatoes" src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png" alt="">
+      </div>
+    </header>
+
+    <div class="container">
+      <img class="image-main" src="https://i.ibb.co/9tLcR7s/avengers.jpg">
+      <a class="button-center-transparent" href="https://www.rottentomatoes.com/m/avengers_infinity_war" target="_blank">
+        Check review
+      </a>
+    </div>
+
+    <footer class="footer gray-panel">
+      <p>
+        An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe,
+        Marvel Studios' "Avengers: Infinity War" brings to the screen the ultimate, deadliest showdown of all time. The
+        Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful
+        Thanos before his blitz of devastation and ruin puts an end to the universe.
+      </p>
+    </footer>
+  </article>
+</body>
+
+</html>
