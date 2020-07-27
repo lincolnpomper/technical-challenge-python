@@ -11,5 +11,5 @@ This file describes which files represents each challenge.
 ## 2. Date formatting
 * 1 `date-friendly-formatter.html` - Implementation
 
-## 2. Apply style
+## 3. Apply style
 * 1 `component-css.html` - Implementation
