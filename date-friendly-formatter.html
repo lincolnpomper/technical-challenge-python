@@ -27,12 +27,12 @@
       })
     })();
 
-    const SECOND_SUFIX = ' second ago';
-    const SECONDS_SUFIX = ' seconds ago';
-    const MINUTE_SUFIX = ' minute ago';
-    const MINUTES_SUFIX = ' minutes ago';
-    const HOUR_SUFIX = ' hour ago';
-    const HOURS_SUFIX = ' hours ago';
+    const SECOND_SUFFIX = ' second ago';
+    const SECONDS_SUFFIX = ' seconds ago';
+    const MINUTE_SUFFIX = ' minute ago';
+    const MINUTES_SUFFIX = ' minutes ago';
+    const HOUR_SUFFIX = ' hour ago';
+    const HOURS_SUFFIX = ' hours ago';
 
     var allDates = getDatesFromSpans();
     window.setInterval(updateDates, 1000);
@@ -61,22 +61,22 @@
         var date = allDates[pos++];
         var seconds = parseInt((currentTime - date.getTime()) / 1000, 10);
         
-        var sufix = ''
+        var suffix = ''
         if(seconds < 60) {
           value = seconds;
-          sufix = value == 1 ? SECOND_SUFIX : SECONDS_SUFIX;
+          suffix = value == 1 ? SECOND_SUFFIX : SECONDS_SUFFIX;
         } else if(seconds < (60 * 60)) {
           value = seconds / (60);
           value = parseInt(value, 10);
-          sufix = value == 1 ? MINUTE_SUFIX : MINUTES_SUFIX;
+          suffix = value == 1 ? MINUTE_SUFFIX : MINUTES_SUFFIX;
         } else if(seconds < (24 * 60 * 60)) {
           value = seconds / (60 * 60);
           value = parseInt(value, 10);
-          sufix = value == 1 ? HOUR_SUFIX : HOURS_SUFIX;
+          suffix = value == 1 ? HOUR_SUFFIX : HOURS_SUFFIX;
         }
 
         if(value != null){
-          item.innerHTML = value + sufix;
+          item.innerHTML = value + suffix;
         }
       });
     }
