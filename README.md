@@ -5,7 +5,7 @@ This file describes which files represents each challenge.
 # Challenges
 
 ## 1. Cache function
-* 1 `RequestCache.py` - Implementation
+* 1 `request_cache.py` - Implementation
 * 2 `request_test.py` - Tests
 
 ## 2. Date formatting
