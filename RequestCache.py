@@ -3,17 +3,8 @@ import redis
 
 
 def smart_cache(func):
-
     def wrapped(request_cache, url, parameters, *args):
-
-        def get_key():
-
-            parameters_str = ""
-            for param in parameters:
-                parameters_str += param
-            return url + ";" + parameters_str
-
-        key = get_key()
+        key = get_cache_key(parameters, url)
         stored_json = request_cache.redis_cache.get(key)
 
         if stored_json is None:
@@ -21,27 +12,24 @@ def smart_cache(func):
             request_cache.redis_cache.set(key, json_value)
         else:
             json_value = stored_json
-
         return json_value
     return wrapped
 
 
 def invalidate_cache(func):
-
     def wrapped(request_cache, url, parameters, *args):
-
-        def get_key():
-
-            parameters_str = ""
-            for param in parameters:
-                parameters_str += param
-            return url + ";" + parameters_str
-
-        key = get_key()
+        key = get_cache_key(parameters, url)
         request_cache.redis_cache.set(key, None)
 
         return func(request_cache, url, parameters, *args)
     return wrapped
+
+
+def get_cache_key(parameters, url):
+    parameters_str = ""
+    for key in parameters:
+        parameters_str += (key + ";" + str(parameters[key])) + ";"
+    return url + ";" + parameters_str
 
 
 class RequestCache:
