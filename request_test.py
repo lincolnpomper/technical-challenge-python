@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 class RequestTest(unittest.TestCase):
     URL = "http://localhost"
-    PARAMETERS = []
+    PARAMETERS = {"param1": "value1"}
     DATA = [{'key1': 'value1'}]
     REDIS_CONTENTS = [{'key1': 'value1'}]
     RESPONSE_CONTENTS = [{'key1': 'value1'}]
