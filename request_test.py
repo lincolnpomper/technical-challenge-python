@@ -1,5 +1,5 @@
 import unittest
-from RequestCache import RequestCache
+from request_cache import RequestCache
 from unittest.mock import patch
 
 
